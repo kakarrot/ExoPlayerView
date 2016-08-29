@@ -23,4 +23,8 @@ compile 'com.github.kakarrot:ExoPlayerView:v1.0'
 [VideoControllerView](https://github.com/brucetoo/VideoControllerView)
 [JieCaoVideoPlayer](https://github.com/lipangit/JieCaoVideoPlayer)
 
+[1]: https://github.com/google/ExoPlayer       "Google exoplayer"
+[2]: https://github.com/brucetoo/VideoControllerView  "VideoControllerView"
+[3]: https://github.com/lipangit/JieCaoVideoPlayer    "JieCaoVideoPlayer"
+
 
