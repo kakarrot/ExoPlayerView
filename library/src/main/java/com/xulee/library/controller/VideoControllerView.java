@@ -187,6 +187,7 @@ public class VideoControllerView extends FrameLayout implements VideoGestureList
 
         if (!mIsShowing) {
             layout_controller.setVisibility(View.VISIBLE);
+            setIsLive(mMediaPlayer.getDuration() == 0 ? true : false);
             ViewAnimator.putOn(mTopLayout)
                     .waitForSize(new ViewAnimator.Listeners.Size() {
                         @Override
@@ -241,6 +242,20 @@ public class VideoControllerView extends FrameLayout implements VideoGestureList
         }
     }
 
+    /**
+     * 直播，隐藏进度条及总时间，显示为“直播”
+     */
+    public void setIsLive(boolean isLive) {
+        View v = findViewById(R.id.tv_live);
+        if(null != v) v.setVisibility(isLive ? View.VISIBLE : View.GONE);
+        if(isLive) {
+            mEndTime.setVisibility(View.GONE);
+            mSeekBar.setVisibility(View.GONE);
+        } else {
+            mEndTime.setVisibility(View.VISIBLE);
+            mSeekBar.setVisibility(View.VISIBLE);
+        }
+    }
 
 
     /**
